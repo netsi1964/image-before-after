@@ -2,7 +2,7 @@
   "name": "image-before-after",
   "version": "1.0.17",
   "description": "Component for the web adding easy comparing of image before and after",
-  "main": "./src/index.js",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "release": "npm version patch && npm publish",
