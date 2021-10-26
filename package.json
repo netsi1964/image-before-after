@@ -1,6 +1,6 @@
 {
   "name": "image-before-after",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Component for the web adding easy comparing of image before and after",
   "main": "index.js",
   "scripts": {
