@@ -1,5 +1,5 @@
 
-import styles from './styles.css';
+import styles from './style.css';
 import templateHtml from './template.html';
 
 const templateElement = document.createElement('template');
