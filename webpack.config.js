@@ -26,7 +26,8 @@ module.exports = {
                   options: {
                     modules: true
                   }
-                }
+                },
+
               ]
             }
         ]
