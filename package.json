@@ -10,6 +10,10 @@
     "image",
     "compare"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/netsi1964/image-before-after.git"
+  },
   "author": "Nanna Bach Munkholm, Sten Hougaard",
   "license": "ISC"
 }
