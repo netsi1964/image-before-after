@@ -1,0 +1,15 @@
+{
+  "name": "image-before-after",
+  "version": "1.0.1",
+  "description": "Component for the web adding easy comparing of image before and after",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "image",
+    "compare"
+  ],
+  "author": "Nanna Bach Munkholm, Sten Hougaard",
+  "license": "ISC"
+}
