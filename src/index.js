@@ -12,6 +12,7 @@ const styles = ` {
     position: relative;
     width: var(--width);
     height: var(--height);
+    display: block;
   }
   .images {
     cursor: col-resize;
