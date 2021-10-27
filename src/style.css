@@ -1,17 +1,55 @@
-.INSTANCE {
-    --BA-before: 'Before';
-      --BA-after: 'After';
-      --BA-width: 0px;
-      --width: 200px;
-      --height: 200px;
-  }
-:host{ width: var(--width); height: var(--height)}
-.INSTANCE .images { cursor: col-resize;}
-.INSTANCE .img {width: 100%; height: 100%; position: absolute;}
-.INSTANCE .after {z-index: 10; top: 0; background-color: orange;}
-.INSTANCE .before {top: 0; background-color: white;}
-.INSTANCE .before:before { color: hsla(0,0%,100%,.6); text-shadow: 0 0 5px black; content: var(--BA-before); position: absolute; margin-left: calc(100% - 56px); margin-top: 10px;}
-.INSTANCE .after:after { color: hsla(0,0%,100%,.6); text-shadow: 0 0 5px black; content: var(--BA-after); margin-top: 10px; margin-left: 10px; position: absolute; }
-.INSTANCE .text { padding: 4px; position: absolute; background: orange; z-index: 15; color: black; bottom: 10px; right: 10px;font-size: 14pt; opacity: .6;}
-.INSTANCE > * {box-sizing: border-box; }
-.INSTANCE { position: relative;}
+ {
+  --BA-before: 'Before';
+  --BA-after: 'After';
+  --BA-width: 0px;
+  --width: 200px;
+  --height: 200px;
+}
+:host {
+  position: relative;
+  width: var(--width);
+  height: var(--height);
+}
+.images {
+  cursor: col-resize;
+}
+.img {
+  position: absolute;
+}
+.after {
+  z-index: 10;
+  top: 0;
+  background-color: orange;
+}
+.before {
+  top: 0;
+  background-color: white;
+}
+.before:before {
+  color: hsla(0, 0%, 100%, 0.6);
+  text-shadow: 0 0 5px black;
+  content: var(--BA-before);
+  position: absolute;
+  margin-left: calc(100% - 56px);
+  margin-top: 10px;
+}
+.after:after {
+  color: hsla(0, 0%, 100%, 0.6);
+  text-shadow: 0 0 5px black;
+  content: var(--BA-after);
+  margin-top: 10px;
+  margin-left: 10px;
+  position: absolute;
+}
+.text {
+  padding: 4px;
+  position: absolute;
+  z-index: 15;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14pt;
+  opacity: 0.6;
+}
+* {
+  box-sizing: border-box;
+}
