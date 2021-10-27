@@ -27,12 +27,15 @@ Using it can be seen here
 
 To use it you should `new` the class `ImageBeforeAfter` with these parameters:
 
-| Parameter | required | Type                | Description                                                        |
-| --------- | -------- | ------------------- | ------------------------------------------------------------------ |
-| selector  | yes      | CSS selector string | A CSS selector to an element you want to add the functionallity to |
-| before    | no       | string              | URL to the before image                                            |
-| after     | no       | string              | URL to the after image                                             |
-| text      | no       | string              | A text to show on top of the images                                |
+| Parameter | required | Type                      | Description                                                        |
+| --------- | -------- | ------------------------- | ------------------------------------------------------------------ |
+| selector  | yes      | CSS selector string       | A CSS selector to an element you want to add the functionallity to |
+| before    | no       | string                    | URL to the before image                                            |
+| after     | no       | string                    | URL to the after image                                             |
+| text      | no       | string                    | A text to show on top of the images                                |
+| width\*   | no       | valid css width or number | The width you want the compoment to be                             |
+
+\*) This is a upcoming feature.
 
 Simply import the component and inserting it into the html element with the class `IBA`:
 
@@ -55,11 +58,43 @@ const myIBA = new ImageBeforeAfter('.IBA', before, after, 'Inverted example');
 
 ## Angular
 
-Add the package to your project: `npm install image-before-after`
+Add the package to your project:
+
+```
+npm install image-before-after
+```
+
+### In the _main.ts_ add a reference to the package:
+
+```
+import 'image-before-after';
+```
+
+This will allow you to use the customElement anywhere in your project.
+
+### In the 'app.module.ts':
+
+Add the **CUSTOM_ELEMENTS_SCHEMA** from the **@angular/core** and add it to the _scemas_ in the **@NgModule**
+
+```
+import { CUSTOM_ELEMENTS_SCHEMA, NgModule } from '@angular/core';
+
+import { AppComponent } from './app.component';
+import { BrowserModule } from '@angular/platform-browser';
+
+@NgModule({
+  declarations: [AppComponent],
+  imports: [BrowserModule],
+  providers: [],
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+})
+export class AppModule {}
+```
 
 # Contributing
 
-TODO
+You are welcome to report Issues and add feature request.
 
 # License
 
