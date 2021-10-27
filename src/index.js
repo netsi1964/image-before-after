@@ -91,17 +91,24 @@ class HTMLImageBeforeAfter extends HTMLElement {
       ? this.getAttribute('after')
       : 'https://dummyimage.com/600x400/ffffff/000.png';
 
-    // Find the width of the before image
-    this.eleDummy.addEventListener('load', () => {
-      this.width = getComputedStyle(this.eleDummy).width;
-      this.height = getComputedStyle(this.eleDummy).height;
+    if (this.hasAttribute('width') && this.hasAttribute('height')) {
+      this.width = ensureUnit(_width);
+      const _height = this.getAttribute('height');
+      this.height = ensureUnit(_height);
       this.init();
-    });
-    this.eleDummy.src = this.before;
+    } else {
+      // No width and height specified, use width and height from before image
+      this.eleDummy.addEventListener('load', () => {
+        this.width = getComputedStyle(this.eleDummy).width;
+        this.height = getComputedStyle(this.eleDummy).height;
+        this.eleDummy.remove();
+        this.init();
+      });
+      this.eleDummy.src = this.before;
+    }
   }
 
   init() {
-    this.eleDummy.remove();
     const _width = this.width;
     const _height = this.height;
 
@@ -136,3 +143,8 @@ class HTMLImageBeforeAfter extends HTMLElement {
 }
 
 window.customElements.define('image-before-after', HTMLImageBeforeAfter);
+
+function ensureUnit(value) {
+  const hasUnit = value.match(/[0123456789\.]/gi).length !== value.length;
+  return `${value}${hasUnit ? '' : 'px'}`;
+}
