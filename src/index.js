@@ -1,8 +1,62 @@
-import styles from './style.css';
 import templateHtml from './template.html';
 
 const templateElement = document.createElement('template');
-
+const styles = ` {
+    --BA-before: 'Before';
+    --BA-after: 'After';
+    --BA-width: 0px;
+    --width: 200px;
+    --height: 200px;
+  }
+  :host {
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+  }
+  .images {
+    cursor: col-resize;
+  }
+  .img {
+    position: absolute;
+  }
+  .after {
+    z-index: 10;
+    top: 0;
+    background-color: orange;
+  }
+  .before {
+    top: 0;
+    background-color: white;
+  }
+  .before:before {
+    color: hsla(0, 0%, 100%, 0.6);
+    text-shadow: 0 0 5px black;
+    content: var(--BA-before);
+    position: absolute;
+    margin-left: calc(100% - 56px);
+    margin-top: 10px;
+  }
+  .after:after {
+    color: hsla(0, 0%, 100%, 0.6);
+    text-shadow: 0 0 5px black;
+    content: var(--BA-after);
+    margin-top: 10px;
+    margin-left: 10px;
+    position: absolute;
+  }
+  .text {
+    padding: 4px;
+    position: absolute;
+    z-index: 15;
+    bottom: 10px;
+    right: 10px;
+    font-size: 14pt;
+    opacity: 0.6;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  `;
 class HTMLImageBeforeAfter extends HTMLElement {
   constructor() {
     super();
