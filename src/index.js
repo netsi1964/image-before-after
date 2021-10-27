@@ -1,10 +1,11 @@
 import templateHtml from './template.html';
 
 const templateElement = document.createElement('template');
-const styles = ` {
-    --BA-before: 'Before';
-    --BA-after: 'After';
-    --BA-width: 0px;
+const styles = `
+:host {
+    --before-text: 'Before';
+    --after-text: 'After';
+    --width: 0px;
     --width: 200px;
     --height: 200px;
   }
@@ -32,7 +33,7 @@ const styles = ` {
   .before:before {
     color: hsla(0, 0%, 100%, 0.6);
     text-shadow: 0 0 5px black;
-    content: var(--BA-before);
+    content: var(--before-text);
     position: absolute;
     margin-left: calc(100% - 56px);
     margin-top: 10px;
@@ -40,7 +41,7 @@ const styles = ` {
   .after:after {
     color: hsla(0, 0%, 100%, 0.6);
     text-shadow: 0 0 5px black;
-    content: var(--BA-after);
+    content: var(--after-text);
     margin-top: 10px;
     margin-left: 10px;
     position: absolute;
