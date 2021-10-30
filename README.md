@@ -6,7 +6,7 @@
 
 # Demo
 
-![Alt text](./examples/example.png?raw=true 'Example from Codepen')
+![Alt text](./examples/example.png?raw=true "Example from Codepen")
 
 You can try out the javascript class version at [codepen](https://codepen.io/netsi1964/full/yLogqGQ).
 
@@ -19,7 +19,7 @@ Using NPM: `npm install image-before-after`
 There will be these versions of the component:
 
 - Javacript Class based
-- TODO: _Webcomponent_
+- Webcomponent: `<image-before-after />`
 
 Using it can be seen here
 
@@ -33,9 +33,7 @@ To use it you should `new` the class `ImageBeforeAfter` with these parameters:
 | before    | no       | string                    | URL to the before image                                            |
 | after     | no       | string                    | URL to the after image                                             |
 | text      | no       | string                    | A text to show on top of the images                                |
-| width\*   | no       | valid css width or number | The width you want the compoment to be                             |
-
-\*) This is a upcoming feature.
+| width     | no       | valid css width or number | The width you want the compoment to be                             |
 
 Simply import the component and inserting it into the html element with the class `IBA`:
 
@@ -57,6 +55,8 @@ const myIBA = new ImageBeforeAfter('.IBA', before, after, 'Inverted example');
 ```
 
 ## Angular
+
+See running demo on [Stackblitz.com](https://stackblitz.com/edit/angular-ivy-ctyn5o).
 
 Add the package to your project:
 
