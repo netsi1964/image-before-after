@@ -54,6 +54,18 @@ const myIBA = new ImageBeforeAfter('.IBA', before, after, 'Inverted example');
 </script>
 ```
 
+## Use webcomponent/CustomElement in a HTML page
+
+The webcomponent or customElement `<imgage-before-after />` can be easily used in any modern browser, simply by importing the code like this:
+
+```
+import imageBeforeAfter from "https://cdn.skypack.dev/image-before-after@1.0.26";
+```
+
+After this your browser knows about the new HTML element, or tag: `image-before-after` and you simply can use it as any other native HTML element.
+
+You can see an example [CustomEement image-before-after](https://codepen.io/netsi1964/pen/XWaepep)
+
 ## Angular
 
 See running demo on [Stackblitz.com](https://stackblitz.com/edit/angular-ivy-ctyn5o).
